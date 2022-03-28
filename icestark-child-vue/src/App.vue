@@ -6,11 +6,6 @@ import { store, event } from '@ice/stark-data'
 const userInfo = store.get('user');
 console.log('userInfo: ', userInfo)
 
-// const jumpToLayout = () => {
-//   console.log('1111')
-//   appHistory.push('/react');
-// };
-
 setTimeout(() => {
   event.emit('freshMessage', 'vue message')
 }, 1000)
@@ -30,8 +25,10 @@ export default defineComponent({
   },
   methods: {
     jumpToLayout() {
-      console.log(1333)
       appHistory.push('/react');
+    },
+    jumpToAPP() {
+      appHistory.push('/about');
     }
   }
 })
@@ -48,7 +45,8 @@ export default defineComponent({
     <router-link to="/list"> List </router-link>
     <br />
     <button @click="jumpToLayout">微应用间跳转</button>
-
+    <br />
+    <button @click="jumpToAPP">跳转到主应用</button>
     <router-view />
   </div>
 

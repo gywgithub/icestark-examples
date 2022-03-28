@@ -25,8 +25,8 @@ const vueJump = () => {
 
     <p><el-link type="primary" @click="innerJump">About</el-link></p>
     <p><el-link type="primary" @click="outerJump">Seller</el-link></p>
-    <!-- <div>跳转到Vue子应用</div>
-    <p><el-link type="primary" @click="vueJump">Vue 子应用首页</el-link></p> -->
+    <div>跳转到Vue子应用</div>
+    <p><el-link type="primary" @click="vueJump">Vue 子应用首页</el-link></p>
 
 
   </div>
